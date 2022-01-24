@@ -14,12 +14,18 @@
 // limitations under the License.
 
 package {
-    // See: http://go/android-license-faq
-    // A large-scale-change added 'default_applicable_licenses' to import
-    // all of the 'license_kinds' from "hardware_nxp_secure_element_license"
-    // to get the below license kinds:
-    //   SPDX-license-identifier-Apache-2.0
-    default_applicable_licenses: ["hardware_nxp_secure_element_license"],
+    default_applicable_licenses: ["vendor_nxp_secure_element_license"],
+}
+
+// Added automatically by a large-scale-change
+// See: http://go/android-license-faq
+license {
+    name: "vendor_nxp_secure_element_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    // large-scale-change unable to identify any license_text files
 }
 
 cc_library_shared {
@@ -56,9 +62,9 @@ cc_library_shared {
         "libese-spi/src/sync",
     ],
     include_dirs: [
-        "hardware/nxp/nfc/pn8x/extns/impl",
-        "hardware/nxp/nfc/pn8x/extns/impl/nxpnfc/2.0",
-        "hardware/nxp/secure_element/pn8x/extns/impl",
+        "vendor/nxp/nfc/extns/impl",
+        "vendor/nxp/nfc/extns/impl/nxpnfc/2.0",
+        "vendor/nxp/secure_element/extns/impl",
     ],
     export_include_dirs: [
         "extns/impl",
@@ -147,7 +153,7 @@ cc_binary {
         "libese-spi/src/include",
     ],
     include_dirs: [
-        "hardware/nxp/nfc/pn8x/extns/impl",
+        "vendor/nxp/nfc/extns/impl",
     ],
     shared_libs: [
         "android.hardware.secure_element@1.0",

@@ -9,5 +9,5 @@ package {
 
 hidl_package_root {
     name: "vendor.nxp.nxpese",
-    path: "hardware/nxp/secure_element/pn8x/extns/intf/nxpese",
+    path: "vendor/nxp/secure_element/extns/intf/nxpese",
 }
