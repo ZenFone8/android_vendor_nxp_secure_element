@@ -177,3 +177,9 @@ cc_binary {
     ],
 }
 
+prebuilt_etc {
+    name: "android.hardware.secure_element@1.2-service.p73.xml",
+    src: "1.2/android.hardware.secure_element@1.2-service.p73.xml",
+    sub_dir: "vintf/manifest",
+    vendor: true,
+}
