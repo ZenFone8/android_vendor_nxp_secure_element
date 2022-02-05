@@ -6,6 +6,9 @@
 
 NXP_VENDOR_PATH := vendor/nxp
 
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(NXP_VENDOR_PATH)/secure_element/sepolicy
+
 PRODUCT_COPY_FILES += \
     $(NXP_VENDOR_PATH)/secure_element/libese-spi/p73/libese-nxp-P73.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-nxp.conf \
 
